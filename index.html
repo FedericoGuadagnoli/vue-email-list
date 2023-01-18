@@ -27,7 +27,8 @@
 </head>
 <body>
   <div id="root">
-    <ul>
+    <i v-if="isLoading && listEmail.length < 10" class="fa-solid fa-spin fa-spinner fa-4x"></i>
+    <ul v-else>
       <li v-for="email in listEmail">{{email}}</li>
     </ul>
   </div>
